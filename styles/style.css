@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Styles */
+
+:root {
+    --main-color: #00a08f;
+    --base-background: #ffffff;
+    --second-background: #f5f7fa;
+    --dark-background: #000;
+    --gray-background: #404040;
+    --clear-text: #fff;
+    --base-text: #555c66;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-background);
+    color: var(--base-text);
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 0 300px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--clear-text);
+    padding: 20px 30px;
+    text-decoration: none;
+    transition: filter 0.3s;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: saturate(.6);
+}
+
+/* Header */
+header {
+    background-color: var(--clear-text);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.nav-container nav{
+    margin: 3px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--base-text);
+    font-weight: 600;
+    padding: .4vw .5vw;
+}
+
+nav a:hover {
+    color: var(--main-color);
+    border-bottom: solid 1px var(--main-color);
+}
+
+/* Banner Home */
+.banner-home {
+    display: flex;
+    background-color: #0000009f;
+    align-items: center;
+    padding: 100px 0;
+    text-align: center;
+    color: var(--base-background);
+    min-height: 400px;
+}
+
+.banner-home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/portada-1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner-home h1 {
+    font-size: 5em;
+    margin: 0px;
+}
+
+.banner-home p {
+    font-size: 1.5em;
+    margin: 20px 0 50px 0;
+}
+
+/* About Home */
+.about-home {
+    background-color: var(--main-color);
+    color: var(--clear-text);
+    padding: 50px 0;
+}
+
+.about-home .col {
+    flex: 1 0 200px;
+    text-align: left;
+    padding: 0px 20px;
+}
+
+/* Services Home */
+.services-home {
+    padding: 50px 0;
+    background: linear-gradient(to bottom, var(--base-background) 60%, var(--second-background) 40%);
+    text-align: center;
+}
+
+.services-home h2 {
+    font-size: 3em;
+    margin: 0px;
+}
+
+.services-home p {
+    font-size: 1.3em;
+    margin: 20px 0 50px 0;
+}
+
+.services-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 80px;
+}
+
+.services-list h3 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+}
+
+.service {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    margin: 25px;
+    padding: 20px;
+    background: var(--base-background);
+    border-radius: 5px;
+    box-shadow: 10px 12px 0px var(--main-color);
+}
+
+.service img {
+    max-width: 80px;
+    margin: 5px 0 20px 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .services-list {
+        flex-direction: column;
+    }
+}
+
+/* Benefits */
+
+.benefits-home {
+    padding: 50px 0;
+    background: var(--second-background);
+    text-align: center;
+}
+
+.benefits-home h2 {
+    font-size: 3em;
+    margin: 0px;
+}
+
+.benefits-home p {
+    font-size: 1.3em;
+    margin: 20px 0 50px 0;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--base-background);
+    text-align: left;
+}
+
+.benefit div {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.benefit:nth-child(2) {
+    background-color: var(--main-color);
+    color: var(--clear-text);
+}
+
+.benefit:nth-child(3) {
+    background-color: var(--dark-background);
+    color: var(--clear-text);
+}
+
+.benefit img {
+    width: 50%;
+}
+
+.benefit ul {
+    list-style: disc;
+}
+
+/* Projects Home */
+.projects-home {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.projects-home .col {
+    flex: 1 0 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.projects-home img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.projects-home .btn {
+    padding: 10px 20px;
+}
+
+/* Commitment Home */
+.commitment-home {
+    background: linear-gradient(to bottom, var(--base-background) 50%, var(--main-color) 50%);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.commitment-home .container {
+    background-color: var(--base-background);
+}
+
+.commitment-home h2 {
+    font-size: 3em;
+    margin: 50px 100px;
+}
+
+.commitment-home p {
+    font-size: 1.3em;
+    margin: 0 100px;
+}
+
+.commitment-home .btn {
+    margin: 50px 100px 70px 100px;
+}
+
+/* Contact Home */
+.contact-home {
+    background-color: var(--main-color);
+    padding: 50px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--base-text);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* FAQ Home */
+.faq {
+    background-color: var(--main-color);
+    padding: 50px 0;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--base-background);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Location Footer */
+.location {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: var(--clear-text);
+    margin: 0 10px;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--main-color);
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-background);
+    padding: 20px 0;
+    color: var(--clear-text);
+    text-align: center;
+}
