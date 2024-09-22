@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     
-    <!-- Palabras clave relacionadas con la construcción en seco -->
     <meta name="keywords" content="MR Obras, Constructora en seco, Drywall, Steel Framing, Wood Frame, Viviendas sostenibles, Remodelaciones">
-    
-    <!-- Descripción que resume los servicios de la constructora -->
     <meta name="description" content="MR Obras es una constructora especializada en sistemas de construcción en seco como drywall, steel framing, y wood frame. Creamos hogares sostenibles y espacios que transforman vidas.">
-    
     <title>MR Obras | Tipologías</title>
-    
-    <!-- Archivos de estilos CSS -->
-    <link rel="stylesheet" href="../styles/style.css" media="screen">
 
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
     <!-- Favicon -->
     <link rel="icon" href="assets/images/fav-icon.png">
 
-    <!-- Link para incluir Font Awesome -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/style.css" media="screen">
+
     <!-- Metadatos para redes sociales -->
     <meta property="og:title" content="MR Obras | Inicio">
     <meta property="og:description" content="MR Obras, tu constructora de confianza para proyectos en drywall, steel framing y wood frame.">
@@ -29,22 +28,27 @@
   </head>
 
   <body>
+   
+    <!-- Nav -->
     <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <img src="../assets/images/logo_full.svg" alt="MR Obras Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/pages/nosotros.html">Nosotros</a></li>
-                    <li><a href="/pages/proyectos.html">Proyectos</a></li>
-                    <li><a href="/pages/tipologías.html">Tipologías</a></li>
-                    <li><a href="/pages/contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-end">
+          <a class="logo" href="../index.html"><img src="../assets/images/logo_full.svg" alt="MR Obras Logo"></a>
+          <button class="navbar-toggler prueba" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0 justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto menu-list">
+              <li class="item-list"><a class="link-list" href="../index.html">Inicio</a></li>
+              <li class="item-list"><a class="link-list" href="nosotros.html">Nosotros</a></li>
+              <li class="item-list"><a class="link-list" href="proyectos.html">Proyectos</a></li>
+              <li class="item-list"><a class="active link-list" href="tipologias.html">Tipologías</a></li>
+              <li class="item-list"><a class="link-list" href="contacto.html">Contacto</a></li>            
+            </ul>
+          </div>
         </div>
-    </header>
+      </nav>
+    </header>  
 
     <footer>
       <section class="location">
@@ -70,5 +74,9 @@
         <p>&copy; 2024 MR Obras. Todos los derechos reservados.</p>
       </div>
     </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
   </body>
 </html>
