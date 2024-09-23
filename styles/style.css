@@ -68,6 +68,10 @@ header {
     background-color: var(--clear-text);
     padding: 10px 0 0 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.034);
 }
 
 .logo img {
@@ -152,6 +156,7 @@ nav li {
     text-align: left;
     color: var(--base-background);
     min-height: 400px;
+    padding-top: 230px;
 }
 
 .banner-home::before {
@@ -194,6 +199,7 @@ nav li {
     flex: 1 0 200px;
     text-align: left;
     padding: 0px 20px;
+    margin-bottom: 0;
 }
 
 .about-home h2 {
@@ -217,6 +223,11 @@ nav li {
         font-weight: 300;
         font-size: .8em;
     }
+
+    .about-home .col {
+        margin-bottom: 5px;
+    }
+    
 
     .banner-home {
         background-image: url(../assets/images/banner-2.png);
@@ -245,11 +256,31 @@ nav li {
         width: 50%;
         font-size: 1em;
     }
+
+    .about-home h2 {
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    
+    .about-home p {
+        font-weight: 300;
+        font-size: .8em;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
     .banner-home {
         background-image: url(../assets/images/banner-2.png);
+    }
+
+    .about-home h2 {
+        font-weight: 500;
+        font-size: 1.5em;
+    }
+    
+    .about-home p {
+        font-weight: 300;
+        font-size: .9em;
     }
 }
 
@@ -523,6 +554,7 @@ nav li {
 
 .benefit img {
     width: 50%;
+    object-fit: cover;
 }
 
 .hover-text {
@@ -687,6 +719,10 @@ nav li {
 
 @media (min-width: 769px) and (max-width: 991px) {
     .benefits-home br {
+        display: none;
+    }
+
+    .benefit .hover-text {
         display: none;
     }
 }
@@ -1203,16 +1239,18 @@ nav li {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-    
-}
-
 /* Footer */
+
+footer {
+    background-color: var(--dark-background);
+    color: var(--clear-text);
+    text-align: center;
+}
 
 .footer-container{
     display: flex;
     flex-direction: row;
-    padding: 100px 60px;
+    padding: 100px 50px 100px 50px;
 }
 
 .footer-info {
@@ -1224,9 +1262,14 @@ nav li {
 }
 
 .footer-social h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+.footer-social p {
+    font-size: .9em;
+    width: 80%;
 }
 
 .social-media {
@@ -1261,19 +1304,269 @@ nav li {
 }
 
 .contact-info h3 {
-    font-size: 1.5em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
 .contact-info p {
+    font-size: .9em;
+    font-weight: 300;
     margin-bottom: 5px;
 }
 
-/* Footer */
-footer {
-    background-color: var(--dark-background);
-    padding: 20px 0;
+.copyright {
+    background-color: var(--gray-background);
+    padding: 40px 0;
+}
+
+.copyright p {
+    font-size: .85em;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 576px) {   
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-info {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .footer-social h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .footer-social p {
+        font-size: .8em;
+        width: 80%;
+    }
+
+    .social-media a {
+        margin: 0 20px 0 0;
+        font-size: 1.8em;
+    }
+
+    .footer-social p {
+        font-size: .9em;
+        width: 100%;
+    }
+
+    .contact-info h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .contact-info p {
+        font-size: .8em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-info {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+    }
+
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    .footer-social h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
+    .footer-social p {
+        font-size: .8em;
+        width: 80%;
+    }
+
+    .social-media a {
+        margin: 0 20px 0 0;
+        font-size: 1.8em;
+    }
+
+    .footer-social p {
+        font-size: .9em;
+        width: 100%;
+    }
+
+    .contact-info h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .contact-info p {
+        font-size: .8em;
+    }
+}
+
+/* Contact Page */
+
+.contact-banner-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: var(--main-color);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: end;
+    color: var(--dark-background);
+}
+
+.contact-banner-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-image: url(../assets/images/steel-framing-image.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.info-banner-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    height: 330px;
+    padding: 30px;
+    margin-left: 70px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-banner-container h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-banner-container p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 576px) {   
+    .contact-banner-container .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .info-banner-contact {
+        margin: 0;
+        padding: 40px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .contact-banner-container .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .info-banner-contact {
+        margin: 0;
+        padding: 40px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .info-banner-contact {
+        margin-left: 0;
+        max-width: 560px;
+        padding: 40px;
+    }
+
+    .contact-banner-container .container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .contact-banner-container p {
+        font-size: 1em;
+    }
+}
+
+/* Projects Page */
+
+.project-image {
+    height: 250px;
+}
+
+.project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Typo Page */
+
+.typo-card {
+    height: 550px;
+    background-position: center;
+    background-size: cover;
     color: var(--clear-text);
-    text-align: center;
+}
+
+.typo-card div {
+    padding: 30px;
+}
+
+.typo-card .button {
+    font-size: .9em;
+    padding: 8px 16px;
+}
+
+.typo-card img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(.4);
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.card-container {
+    padding: 0 5px;
 }

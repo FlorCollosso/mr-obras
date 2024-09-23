@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/fav-icon.png">
+    <link rel="icon" href="../assets/images/fav-icon.png">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -50,44 +50,133 @@
       </nav>
     </header>
 
-    <main>
-      <div class="container-gallery-proyectos">
-        <img src="../assets/images/vivienda-moderna-2.jpg" alt="">
-        <img src="../assets/images/vivienda-moderna.jpg" alt="">
-        <img src="../assets/images/vivienda-familiar-2.jpeg" alt="">
-        <img src="../assets/images/vivienda-familiar-3.jpg" alt="">
-        <img src="../assets/images/vivienda-familiar-4.jpg" alt="">
-        <img src="../assets/images/vivienda-familiar-5.jpg" alt="">
-      </div>
-    </main>
-
-    <footer>
-      <section class="location">
-        <div class="container">
-            <h2>Dónde podés encontrarnos</h2>
-            <p>Conectate con nosotros en nuestras redes sociales para ver nuestros proyectos más recientes, novedades y consejos sobre construcción en seco. ¡Sumate a nuestra comunidad!</p>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.864392335697!2d-63.77294198464393!3d-32.15287748212254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c8172f93a54739%3A0x281f46771e44488a!2sEl%20T%C3%ADo%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1692590968351!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="contact-info">
-                <h3>Datos de contacto</h3>
-                <p>contacthere@email.com</p>
-                <p>+54 3576 839271</p>
-                <p>Mitre 1435, El Tío. Córdoba, Argentina</p>
-            </div>
-        </div>
-      </section>
+    <!-- Banner -->
+    <section class="banner-projects">
       <div class="container">
-        <p>&copy; 2024 MR Obras. Todos los derechos reservados.</p>
+        <div>
+          <h1 class="text-center my-4">Nuestros Proyectos</h1>
+          <p class="text-center">​Te invitamos a recorrer nuestra galería de proyectos y descubrir cómo hemos transformado ideas en realidades tangibles.</p>
+        </div>
+        <h5>¿Interesado en construir tu propio hogar?</h5>
+        <p>Descubrí nuestras tipologías de casas para encontrar el diseño perfecto que se adapte a las necesidades de tu familia.</p>
+        <a href="#"> Ver tipologías</a>
       </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </section>
+
+    <!-- Tabs -->
+    <section class="container my-4">
+      <ul class="nav nav-tabs">
+          <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#viviendas-familiares">Viviendas Familiares</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#espacios-comerciales">Espacios Comerciales</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#remodelaciones">Remodelaciones</a>
+          </li>
+      </ul>
+
+      <!-- Galerías en cada tab -->
+      <div class="tab-content my-3 gallery-projects">
+          <!-- Viviendas Familiares -->
+          <div class="tab-pane fade show active" id="viviendas-familiares">
+              <div class="row">
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-moderna-2.jpg" class="img-fluid" alt="Vivienda Familiar 1">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-moderna.jpg" class="img-fluid" alt="Vivienda Familiar 2">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-familiar-2.jpg" class="img-fluid" alt="Vivienda Familiar 3">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-familiar-3.jpg" class="img-fluid" alt="Vivienda Familiar 4">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-familiar-4.jpg" class="img-fluid" alt="Vivienda Familiar 5">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/vivienda-familiar-5.jpg" class="img-fluid" alt="Vivienda Familiar 6">
+                  </div>
+              </div>
+          </div>
+
+          <!-- Espacios Comerciales -->
+          <div class="tab-pane fade" id="espacios-comerciales">
+              <div class="row">
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/espacio-comercial.jpg" class="img-fluid" alt="Comercial 1">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid" alt="Comercial 2">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/espacio-comercial-3.jpg" class="img-fluid" alt="Comercial 3">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                    <img src="../assets/images/finezza.jpg" class="img-fluid" alt="Comercial Finezza">
+                  </div>
+              </div>
+          </div>
+
+          <!-- Remodelaciones -->
+          <div class="tab-pane fade" id="remodelaciones">
+              <div class="row">
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid" alt="Remodelación 1">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/remodelacion.jpeg" class="img-fluid" alt="Remodelación 2">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                      <img src="../assets/images/remodelacion-2.jpeg" class="img-fluid" alt="Remodelación 3">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                    <img src="../assets/images/remodelacion-3.webp" class="img-fluid" alt="Remodelación 3">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                    <img src="../assets/images/remodelacion-4.jpg" class="img-fluid" alt="Remodelación 3">
+                  </div>
+                  <div class="col-md-4 mb-3 project-image">
+                    <img src="../assets/images/remodelacion-5.jpg" class="img-fluid" alt="Remodelación 3">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <section class="container footer-container">
+              <div class="footer-info">
+                  <div class="footer-social">
+                      <h2>Dónde podés encontrarnos</h2>
+                      <p>Conectate con nosotros en nuestras redes sociales para ver nuestros proyectos más recientes, novedades y consejos sobre construcción en seco. ¡Sumate a nuestra comunidad!</p>
+                      <div class="social-media">
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      </div>
+                  </div>
+                  <div class="contact-info">
+                      <h3>Datos de contacto</h3>
+                      <p>contacthere@email.com</p>
+                      <p>+54 3576 839271</p>
+                      <p>Mitre 1435, El Tío. Córdoba, Argentina</p>
+                  </div>
+              </div>
+              <div class="map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.864392335697!2d-63.77294198464393!3d-32.15287748212254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c8172f93a54739%3A0x281f46771e44488a!2sEl%20T%C3%ADo%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1692590968351!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+      </section>
+      <div class="copyright">
+          <p>&copy; 2024 MR Obras. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
   </body>
 </html>
