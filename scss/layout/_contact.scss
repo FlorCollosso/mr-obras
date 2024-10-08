@@ -1,0 +1,152 @@
+.contact-home {
+    background-color: $main-color;
+    padding: 50px 0;
+
+    .contact-container {
+        @include flexbox(row, center, center);
+        padding: 0 80px;
+        margin-bottom: 50px;
+
+        .form-container {
+            width: 50%;
+            padding: 30px;
+
+            h2 {
+                font-size: 3em;
+                font-weight: 600;
+                color: $clear-text;
+                margin-bottom: 20px;
+            }
+
+            .button {
+                background-color: $main-color-dark;
+                width: 100%;
+
+                &:hover {
+                    background-color: #026b61;
+                }
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px 15px;
+                    border: none;
+                    box-sizing: border-box;
+
+                    &:focus-visible {
+                        outline: 2px solid $main-color-light;
+                        box-shadow: none;
+                    }
+                }
+
+                textarea {
+                    height: 100px;
+                    resize: vertical;
+                }
+            }
+        }
+
+        // FQA
+        .fqa-container {
+            width: 50%;
+            background-color: $second-background;
+            padding: 10px;
+
+            .fqa-item {
+                padding: 20px;
+                border-radius: 5px;
+
+                h3 {
+                    font-size: 1em;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    font-size: 1em;
+                    padding: 20px;
+                }
+
+                .fqa-question {
+                    cursor: pointer;
+                    @include flexbox(row, space-between, center);
+                    background-color: $clear-text;
+                    padding: 20px;
+                }
+
+                .fqa-answer {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.3s ease;
+                }
+
+                &:hover {
+
+                    .fqa-answer {
+                        height: auto;
+                    }
+                    
+                    .fqa-question h3 {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 576px) {
+        .contact-container {
+            flex-direction: column;
+            padding: 0 20px;
+
+            .form-container {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+
+            .fqa-container {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            padding: 0 20px;
+
+            .form-container {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+
+            .fqa-container {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 991px) {
+        .contact-container {
+            max-width: 600px;
+            flex-direction: column;
+            padding: 0 20px;
+
+            .form-container {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 30px;
+            }
+
+            .fqa-container {
+                width: 100%;
+            }
+        }
+    }
+}

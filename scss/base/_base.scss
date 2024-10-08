@@ -1,0 +1,39 @@
+@import '../utilities/variables';
+@import '../utilities/mixins';
+
+body {
+    background-color: $base-background;
+    font-family: $font-family;
+    color: $base-text;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: $container-width;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.title {
+    @include title-style($titles-color);
+}
+
+.subtitle {
+    @include subtitle-style($base-text);
+}

@@ -1,0 +1,20 @@
+.button {
+    @include button-style($main-color, $main-color-dark, $clear-text);
+}
+
+.form-container .button {
+    @include button-style($main-color-dark, lighten($main-color-dark, 10%), $clear-text);
+}
+
+.base-link {
+    font-weight: 400;
+    width: fit-content;
+    border-bottom: 1px solid $main-color;
+    padding-bottom: 3px;
+    transition: 0.2s ease-in-out;
+    color: $base-text;
+
+    @media (min-width: 1px) and (max-width: 1199px) {
+        font-size: .9em;
+    }
+}

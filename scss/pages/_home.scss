@@ -1,0 +1,522 @@
+// Banner Home
+.banner-home {
+    @include background-image('../assets/images/banner.png', cover, center);
+    min-height: 400px;
+    padding: 230px 0 130px 0;
+    @include flexbox(column, left, center);
+    text-align: left;
+    color: $clear-text;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 80%;
+        @include background-image('../assets/images/banner-img.jpg', cover, top right);
+        background-attachment: fixed;
+        opacity: 0.9;
+        z-index: -1;
+    }
+
+    h1 {
+        @include text-style(3em, 700, 0, left, $clear-text);
+        width: 50%;
+    }
+
+    p {
+        color: $clear-text;
+        width: 50%;
+        padding: 20px 0 50px 0;
+    }
+}
+
+// Responsive Banner Home
+.banner-home {
+    @media (max-width: 1199px) {
+        background-image: url(../assets/images/banner-2.png);
+    }
+
+    @media (max-width: 768px) {
+        padding: 200px 0 100px 0;
+
+        h1 {
+            @include text-style(2.5em, 700, 0, left, $clear-text);
+        }
+
+        p {
+            @include text-style(1em, 300, 0, left, $clear-text);
+        }
+    }
+
+    @media (max-width: 576px) {
+        background-image: url(../assets/images/banner-3.png);
+        padding: 150px 0 45px 0;
+        min-height: 600px;
+
+        h1 {
+            @include text-style(1.7em, 700, 0, left, $clear-text);
+            width: 100%;
+        }
+
+        p {
+            @include text-style(.9em, 300, 0, left, $clear-text);
+            width: 100%;
+        }
+    }
+}
+
+// About
+.about-home {
+    background-color: $main-color;
+    color: $clear-text;
+    padding: 50px 0;
+
+    .col {
+        flex: 1 0 200px;
+        text-align: left;
+        padding-right: 25px;
+        margin: 15px 0;
+        height: 100%;
+
+        h5 {
+            @include text-style(1.8em, 500, 10px, left, $clear-text);
+        }
+
+        p {
+            @include text-style(1em, 300, 0, left, $clear-text);
+        }
+    }
+}
+
+// Responsive About
+.about-home {
+    @media (max-width: 576px) {
+        padding: 25px 0;
+
+        .col {
+            padding-right: 0;
+
+            h5 {
+                @include text-style(1.3em, 500, 5px, left, $clear-text);
+            }
+        }
+
+        @media (min-width: 576px) and (max-width: 768px) {
+            .col {
+                h5 {
+                    @include text-style(1.5em, 500, 8px, left, $clear-text);
+                }
+            }
+        }
+    }
+}
+
+// Services
+.services-home {
+    padding: 80px 0 0 0;
+    background: linear-gradient(to bottom, $base-background 60%, $second-background 40%);
+    text-align: center;
+
+    >.container {
+        padding: 0;
+    }
+
+    .services-container {
+        @include flexbox(column, center, center);
+    }
+
+    .image-container {
+        width: 90%;
+        height: 500px;
+        margin-top: 70px;
+        @include background-image('../assets/images/3-workers.jpg', cover, top center);
+        background-attachment: fixed;
+        object-fit: cover;
+    }
+
+    .services-list {
+        @include flexbox(row, center, center);
+        width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 100px;
+
+        .service {
+            width: 200px;
+            height: 180px;
+            @include flexbox(column, center, center);
+            @include box-shadow-effect;
+            padding: 25px 40px;
+            margin: 20px;
+
+            h3 {
+                @include text-style(18px, 500, 0, center, $base-text);
+            }
+
+            img {
+                max-width: 70px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// Responsive Services
+.services-home {
+    @media (max-width: 576px) {
+        .services-list {
+            display: grid;
+            grid-template-columns: 190px 190px;
+            justify-items: center;
+
+            .service {
+                width: 150px;
+                height: 130px;
+                padding: 25px 50px;
+                margin: 10px;
+
+                h3 {
+                    @include text-style(18px, 500, 0, center, $base-text);
+                }
+
+                img {
+                    max-width: 40px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .services-list {
+            display: grid;
+            grid-template-columns: 190px 190px;
+            justify-items: center;
+
+            .service {
+                width: 150px;
+                height: 130px;
+                padding: 25px 50px;
+                margin: 10px;
+
+                h3 {
+                    @include text-style(12px, 500, 0, center, $base-text);
+                }
+
+                img {
+                    max-width: 40px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        br {
+            display: none;
+        }
+
+        .services-list {
+            .service {
+                width: 150px;
+                height: 130px;
+                padding: 15px 40px;
+                margin: 15px;
+
+                h3 {
+                    @include text-style(14px, 500, 0, center, $base-text);
+                }
+
+                img {
+                    max-width: 40px;
+                    margin: 5px 0 20px;
+                }
+            }
+        }
+
+        .image-container {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .services-list {
+            .service {
+                width: 150px;
+                height: 130px;
+                padding: 40px 15px 45px 15px;
+                margin: 16px;
+
+                h3 {
+                    @include text-style(14px, 500, 0, center, $base-text);
+                }
+
+                img {
+                    max-width: 40px;
+                    margin: 5px 0 15px;
+                }
+            }
+        }
+    }
+}
+
+// Benefits
+.benefits-home {
+    padding: 0 0 50px 0;
+    background: $second-background;
+    text-align: center;
+
+    .benefits-container {
+        @include flexbox(column, center, center);
+
+        .benefits-list {
+            margin-top: 70px;
+
+            .benefit {
+                @include flexbox(row, center, center);
+                text-align: left;
+                overflow: hidden;
+                height: 100%;
+
+                img {
+                    width: 50%;
+                    min-height: 380px;
+                    object-fit: cover;
+                }
+
+                .benefit-card {
+                    width: 50%;
+                    padding: 50px;
+                    @include flexbox(column, center, left);
+
+                    .link-steel {
+                        color: $main-color;
+
+                        &:hover {
+                            color: $main-color-light;
+                            border-bottom: 1px solid $main-color-light;
+                        }
+                    }
+
+                    .link-wood {
+                        color: $clear-text;
+                        border-bottom: 1px solid $clear-text;
+
+                        &:hover {
+                            border-bottom: 1px solid $dark-background;
+                            color: $dark-background;
+                        }
+                    }
+
+                    .link-drywall {
+                        color: $clear-text;
+
+                        &:hover {
+                            color: $main-color-light;
+                            border-bottom: 1px solid $main-color-light;
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    background-color: $base-background;
+
+                    .benefit-card {
+                        background-color: $base-background;
+                        color: $base-text;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: $main-color;
+                    flex-direction: row-reverse;
+
+                    .hover-text {
+                        transform: translateX(-100%);
+                    }
+
+                    .benefit-card {
+                        background-color: $main-color;
+                        color: $clear-text;
+                    }
+                }
+
+                &:nth-child(3) {
+                    background-color: $dark-background;
+
+                    .benefit-card {
+                        background-color: $dark-background;
+                        color: $clear-text;
+                    }
+                }
+
+                ul {
+                    font-size: .9em;
+                    list-style: disc inside;
+                    text-indent: -22px;
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+}
+
+// Responsive Benefits
+.benefits-home {
+    @media (max-width: 768px) {
+        .benefits-container {
+            .benefits-list {
+                .benefit {
+                    flex-direction: column;
+                    height: 100%;
+
+                    &:nth-child(2) {
+                        flex-direction: column;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .benefit-card {
+                        width: 100%;
+                    }
+
+                    .hover-text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Projects
+.projects-home {
+    background-color: $base-background;
+    padding: 80px 0;
+    margin: 0 20px;
+    text-align: center;
+
+    .container {
+        padding: 0;
+
+        .cards-container {
+            margin: 60px 0;
+        }
+    }
+}
+
+// Commitment Home
+.commitment-home {
+    background: linear-gradient(to bottom, $base-background 50%, $main-color 50%);
+    padding: 0 0 50px 0;
+    text-align: center;
+
+    .container {
+        background-color: $base-background;
+        padding: 50px;
+    }
+
+    p {
+        font-size: 1.1em;
+        margin: 30px 0 40px 0;
+    }
+
+    .button {
+        font-size: .9em;
+    }
+
+    .commitment-container {
+        max-width: 900px;
+    }
+}
+
+// Responsive Commitment Home
+.commitment-home {
+    @media (max-width: 576px) {
+        .container {
+            padding: 40px;
+        }
+    
+        p {
+            font-size: .9em;
+            margin: 30px 0 30px;
+        }
+
+        h2 {
+            padding: 0;
+        }
+    
+        .button {
+            font-size: .9em;
+        }
+    
+        .commitment-container {
+            width: 400px;
+        }
+    }
+    
+    @media (min-width: 576px) and (max-width: 768px) {
+        .container {
+            padding: 40px;
+        }
+    
+        p {
+            font-size: .9em;
+            margin: 20px 0 30px;
+        }
+
+        h2 {
+            padding: 0;
+        }
+    
+        .button {
+            font-size: .8em;
+        }
+    
+        .commitment-container {
+            width: 80vw;
+        }
+    }
+    
+    @media (min-width: 769px) and (max-width: 991px) {
+        .container {
+            padding: 50px;
+        }
+    
+        p {
+            font-size: 1em;
+            margin: 20px 0 30px;
+        }
+    
+        .button {
+            font-size: .8em;
+        }
+    
+        .commitment-container {
+            width: 600px;
+        }
+    }
+    
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .container {
+            padding: 50px;
+        }
+    
+        p {
+            font-size: 1em;
+            margin: 20px 0 30px;
+        }
+    
+        .button {
+            font-size: .8em;
+        }
+    
+        .commitment-container {
+            width: 700px;
+        }
+    }
+}
