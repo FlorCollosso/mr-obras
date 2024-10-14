@@ -1,4 +1,4 @@
-// Banner Home
+// Banner
 .banner-home {
     @include background-image('../assets/images/banner.png', cover, center);
     min-height: 400px;
@@ -30,10 +30,8 @@
         width: 50%;
         padding: 20px 0 50px 0;
     }
-}
 
-// Responsive Banner Home
-.banner-home {
+    // Responsive Banner
     @media (max-width: 1199px) {
         background-image: url(../assets/images/banner-2.png);
     }
@@ -88,10 +86,8 @@
             @include text-style(1em, 300, 0, left, $clear-text);
         }
     }
-}
 
-// Responsive About
-.about-home {
+    // Responsive About
     @media (max-width: 576px) {
         padding: 25px 0;
 
@@ -161,10 +157,8 @@
             }
         }
     }
-}
 
-// Responsive Services
-.services-home {
+    // Responsive Services
     @media (max-width: 576px) {
         .services-list {
             display: grid;
@@ -361,10 +355,8 @@
             }
         }
     }
-}
 
-// Responsive Benefits
-.benefits-home {
+    // Responsive Benefits
     @media (max-width: 768px) {
         .benefits-container {
             .benefits-list {
@@ -432,15 +424,13 @@
     .commitment-container {
         max-width: 900px;
     }
-}
 
-// Responsive Commitment Home
-.commitment-home {
+    // Responsive Commitment Home
     @media (max-width: 576px) {
         .container {
             padding: 40px;
         }
-    
+
         p {
             font-size: .9em;
             margin: 30px 0 30px;
@@ -449,21 +439,21 @@
         h2 {
             padding: 0;
         }
-    
+
         .button {
             font-size: .9em;
         }
-    
+
         .commitment-container {
             width: 400px;
         }
     }
-    
+
     @media (min-width: 576px) and (max-width: 768px) {
         .container {
             padding: 40px;
         }
-    
+
         p {
             font-size: .9em;
             margin: 20px 0 30px;
@@ -472,49 +462,49 @@
         h2 {
             padding: 0;
         }
-    
+
         .button {
             font-size: .8em;
         }
-    
+
         .commitment-container {
             width: 80vw;
         }
     }
-    
+
     @media (min-width: 769px) and (max-width: 991px) {
         .container {
             padding: 50px;
         }
-    
+
         p {
             font-size: 1em;
             margin: 20px 0 30px;
         }
-    
+
         .button {
             font-size: .8em;
         }
-    
+
         .commitment-container {
             width: 600px;
         }
     }
-    
+
     @media (min-width: 992px) and (max-width: 1199px) {
         .container {
             padding: 50px;
         }
-    
+
         p {
             font-size: 1em;
             margin: 20px 0 30px;
         }
-    
+
         .button {
             font-size: .8em;
         }
-    
+
         .commitment-container {
             width: 700px;
         }

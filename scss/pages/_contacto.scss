@@ -1,0 +1,85 @@
+// Banner
+.contact-banner-container {
+    @include flexbox(row, center, end);
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: $main-color;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        @include background-image('../../assets/images/steel-framing-image.jpg', cover, center);
+        z-index: 1;
+    }
+
+    .info-banner-contact {
+        @include flexbox(column, space-between, flex-start);
+        background-color: $clear-text;
+        padding: 50px;
+        height: 370px;
+        margin-left: 70px;
+        max-width: 600px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        @include text-style(2.2em, 700, 20px, left, $dark-background);
+    }
+
+    p {
+        @include text-style(1em, 500, 20px, left, $base-text);
+        line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 576px) {
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-banner-contact {
+            margin: 0;
+            padding: 40px;
+            height: 450px;
+        }
+
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-banner-contact {
+            margin: 0;
+            padding: 40px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 991px) {
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .info-banner-contact {
+            margin: 0;
+            padding: 40px;
+            max-width: 560px;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+    }
+}
