@@ -1,9 +1,8 @@
 .card {
     border: none;
-    height: 480px;
     width: 30%;
     margin: 20px 15px;
-    padding: 20px;
+    padding: 25px;
     @include box-shadow-effect;
     background-color: $second-background;
 
@@ -38,8 +37,8 @@
 // Responsive
 @media (max-width: 576px) {
     .card {
-        height: 390px;
-        width: 270px;
+        min-height: 390px;
+        min-width: 270px;
         padding: 12px;
 
         .card-body {
@@ -57,8 +56,8 @@
 @media (min-width: 576px) and (max-width: 768px) {
     .card {
         flex-direction: row;
-        height: 250px;
-        width: 600px;
+        min-height: 250px;
+        min-width: 85vw;
         padding-right: 0;
 
         .card-body {
@@ -86,8 +85,8 @@
 @media (min-width: 769px) and (max-width: 991px) {
     .card {
         flex-direction: row;
-        height: 250px;
-        width: 600px;
+        min-height: 250px;
+        min-width: 600px;
         padding-right: 0;
 
         .card-body {
@@ -114,8 +113,7 @@
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .card {
-        height: 390px;
-        width: 270px;
+        min-width: 270px;
         padding: 15px;
 
         .card-body {

@@ -154,10 +154,9 @@ p {
 
 .card {
   border: none;
-  height: 480px;
   width: 30%;
   margin: 20px 15px;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 10px 12px 0px #00a08f;
   background: #ffffff;
   border-radius: 5px;
@@ -205,8 +204,8 @@ p {
 
 @media (max-width: 576px) {
   .card {
-    height: 390px;
-    width: 270px;
+    min-height: 390px;
+    min-width: 270px;
     padding: 12px;
   }
   .card .card-body p {
@@ -219,8 +218,8 @@ p {
 @media (min-width: 576px) and (max-width: 768px) {
   .card {
     flex-direction: row;
-    height: 250px;
-    width: 600px;
+    min-height: 250px;
+    min-width: 85vw;
     padding-right: 0;
   }
   .card .card-body {
@@ -246,8 +245,8 @@ p {
 @media (min-width: 769px) and (max-width: 991px) {
   .card {
     flex-direction: row;
-    height: 250px;
-    width: 600px;
+    min-height: 250px;
+    min-width: 600px;
     padding-right: 0;
   }
   .card .card-body {
@@ -272,8 +271,7 @@ p {
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .card {
-    height: 390px;
-    width: 270px;
+    min-width: 270px;
     padding: 15px;
   }
   .card .card-body p {
@@ -867,7 +865,7 @@ footer .copyright p {
     margin: 10px;
   }
   .services-home .services-list .service h3 {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
     margin-bottom: 0;
     text-align: center;
@@ -1255,7 +1253,7 @@ footer .copyright p {
 }
 
 .about-services {
-  padding: 80px 0;
+  padding-bottom: 80px;
 }
 .about-services .container {
   display: flex;
@@ -1356,6 +1354,363 @@ footer .copyright p {
   }
   .about-services .container .about-service p {
     font-size: 0.9em;
+  }
+}
+
+.team {
+  position: relative;
+  padding-bottom: 80px;
+}
+.team .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-right: 70px;
+}
+.team .container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 150px;
+  background-color: #017c70;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+.team .container .team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 2;
+}
+.team .container .team-members .card {
+  cursor: auto;
+}
+.team .container .team-members .team-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  flex: 1;
+}
+.team .container .team-members .team-member .team-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.team .container .team-members .team-member .team-image-container img {
+  height: 100%;
+  object-fit: cover;
+}
+.team .container .team-members .team-member .team-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.team .container .team-members .team-member .team-info-container .team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.team .container .team-members .team-member .team-info-container .team-info h3 {
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #555c66;
+  font-size: clamp(24px, 2vw, 20px);
+}
+.team .container .team-members .team-member .team-info-container .team-info h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #00a08f;
+}
+.team .container .team-members .team-member .team-info-container .team-info p {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #555c66;
+}
+.team .container .team-members .team-member .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.team .container .team-members .team-member .social-media a {
+  font-size: 1.2em;
+  margin: 0 8px;
+  color: #00a08f;
+}
+@media (max-width: 576px) {
+  .team .container {
+    padding-right: 45px;
+  }
+  .team .container .team-members {
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .team .container .team-members .team-member {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+  }
+  .team .container .team-members .team-member h3 {
+    font-size: 1.5em;
+  }
+  .team .container .team-members .team-member h4 {
+    font-size: 1em;
+  }
+  .team .container .team-members .team-member p {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .team .container {
+    padding-right: 50px;
+  }
+  .team .container .team-members {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 30px;
+    margin: 0;
+  }
+  .team .container .team-members .team-member {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    padding: 25px;
+    margin: 0;
+  }
+  .team .container .team-members .team-member div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .team .container .team-members .team-member .team-image-container {
+    width: 30%;
+    height: 280px;
+    overflow: hidden;
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+  .team .container .team-members .team-member .team-image-container img {
+    width: 100%;
+  }
+  .team .container .team-members .team-member .team-info-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .team .container .team-members .team-member .team-info-container .team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .team .container .team-members .team-member .team-info-container .team-info h3 {
+    font-size: 1.8em;
+  }
+  .team .container .team-members .team-member .team-info-container .team-info h4 {
+    font-size: 1.2em;
+  }
+  .team .container .team-members .team-member .team-info-container .team-info p {
+    font-size: 0.9em;
+    text-align: left;
+  }
+}
+
+.service-integral {
+  background-color: #f5f7fa;
+  padding: 80px 0 110px 0;
+}
+.service-integral .container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 60px;
+  width: clamp(260px, 90%, 1200px);
+}
+.service-integral .container .service-integral-icon img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 30px;
+}
+.service-integral .container h2 {
+  width: 70%;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #000;
+}
+.service-integral .container p {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: center;
+  color: #555c66;
+  line-height: 1.8em;
+  width: 90%;
+}
+@media (max-width: 576px) {
+  .service-integral .container {
+    padding: 50px 30px;
+    width: 80%;
+  }
+  .service-integral .container .service-integral-icon img {
+    width: 70px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .service-integral .container h2 {
+    width: 100%;
+    font-size: 2em;
+  }
+  .service-integral .container p {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .service-integral .container {
+    padding: 50px 30px;
+    width: 85%;
+  }
+  .service-integral .container .service-integral-icon img {
+    width: 75px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .service-integral .container h2 {
+    width: 100%;
+    font-size: 2.5em;
+  }
+  .service-integral .container p {
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .service-integral .container {
+    padding: 50px 30px;
+    width: 90%;
+  }
+  .service-integral .container .service-integral-icon img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .service-integral .container h2 {
+    width: 70%;
+    font-size: 2.5em;
+  }
+  .service-integral .container p {
+    font-size: 0.9em;
+  }
+}
+
+.projects {
+  padding-bottom: 40px;
+  background-color: #f5f7fa;
+}
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.projects .container .title {
+  background-color: #00a08f;
+  color: #fff;
+  width: 320px;
+  position: absolute;
+  top: -1.2em;
+  z-index: 2;
+  padding: 20px;
+}
+.projects .container .title::after {
+  display: none;
+}
+.projects .container .carousel-inner .carousel-item img {
+  height: 100%;
+}
+.projects .container .carousel-inner .carousel-item .carousel-caption {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  bottom: -10em;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  transition: bottom 0.5s;
+}
+.projects .container .carousel-inner .carousel-item:hover .carousel-caption {
+  bottom: 0;
+}
+.projects .container .projects-description {
+  padding: 50px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .container .projects-description p {
+  width: 70%;
+  padding-right: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: left;
+  color: #555c66;
+}
+@media (max-width: 576px) {
+  .projects .container .title {
+    width: 180px;
+    font-size: 1.5em;
+    top: -1.8em;
+  }
+  .projects .container .projects-description {
+    padding: 30px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .projects .container .projects-description p {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .projects .container .title {
+    width: 200px;
+    font-size: 1.7em;
+  }
+  .projects .container .projects-description {
+    padding: 30px 5px;
   }
 }
 

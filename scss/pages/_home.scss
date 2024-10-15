@@ -172,7 +172,7 @@
                 margin: 10px;
 
                 h3 {
-                    @include text-style(18px, 500, 0, center, $base-text);
+                    @include text-style(12px, 500, 0, center, $base-text);
                 }
 
                 img {

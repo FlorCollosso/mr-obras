@@ -2,7 +2,7 @@
 .hero {
     background-color: $second-background;
     padding: 160px 0 0 0;
-    
+
     .container {
         @include flexbox(row, center, center);
         align-items: flex-end;
@@ -11,12 +11,12 @@
             @include flexbox(column, center, flex-start);
             width: 50%;
             padding: 0 0 30px 40px;
-    
+
             h1 {
                 @include text-style(null, 700, 20px, left, $main-color);
-                font-size: clamp(24px, 4.5vw, 60px); 
+                font-size: clamp(24px, 4.5vw, 60px);
             }
-    
+
             p {
                 @include text-style(1.1em, 500, 40px, left, $base-text);
             }
@@ -43,14 +43,14 @@
                 padding: 0 20px;
 
                 h1 {
-                    font-size: 8vw; 
+                    font-size: 8vw;
                 }
-        
+
                 p {
                     font-size: 1em;
                 }
             }
-    
+
             .hero-image {
                 width: 100%;
                 margin-top: 30px;
@@ -67,14 +67,14 @@
                 padding: 0 20px;
 
                 h1 {
-                    font-size: 8vw; 
+                    font-size: 8vw;
                 }
-        
+
                 p {
                     font-size: 1.2em;
                 }
             }
-    
+
             .hero-image {
                 width: 100%;
             }
@@ -85,13 +85,13 @@
         .container {
             .hero-content {
                 width: 40%;
-                text-align: center;           
-    
+                text-align: center;
+
                 p {
                     font-size: .9em;
                 }
             }
-    
+
             .hero-image {
                 width: 60%;
             }
@@ -101,8 +101,8 @@
 
 // About Services section
 .about-services {
-    padding: 80px 0;
-    
+    padding-bottom: 80px;
+
     .container {
         @include flexbox(row, center, stretch);
 
@@ -113,11 +113,11 @@
             background-color: $main-color;
             color: $clear-text;
             flex: 1;
-    
+
             h2 {
                 @include text-style(2.2em, 700, 20px, center, $clear-text);
             }
-    
+
             p {
                 @include text-style(1em, 500, 0, center, $clear-text);
             }
@@ -156,11 +156,11 @@
                 width: 100%;
                 height: 400px;
                 padding: 40px 30px;
-    
+
                 h2 {
                     font-size: 1.8em;
                 }
-    
+
                 p {
                     font-size: .9em;
                 }
@@ -179,7 +179,7 @@
                 h2 {
                     font-size: 1.8em;
                 }
-    
+
                 p {
                     font-size: .9em;
                 }
@@ -195,10 +195,387 @@
                 h2 {
                     font-size: 1.6em;
                 }
-    
+
                 p {
                     font-size: .9em;
                 }
+            }
+        }
+    }
+}
+
+// Team section
+.team {
+    position: relative;
+    padding-bottom: 80px;
+
+    .container {
+        @include flexbox(column, center, center);
+        text-align: center;
+        width: 100%;
+        padding-right: 70px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 150px;
+            background-color: $main-color-dark;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            z-index: 1;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 30px;
+            padding-top: 30px;
+            position: relative;
+            z-index: 2;
+
+            .card {
+                cursor: auto;
+            }
+
+            .team-member {
+                @include flexbox(column, space-between, center);
+                padding: 20px;
+                width: 100%;
+                flex: 1;
+
+                .team-image-container {
+                    width: 100%;
+                    height: 250px;
+                    overflow: hidden;
+                    margin-bottom: 20px;
+
+                    img {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .team-info-container {
+                    @include flexbox(column, space-between, center);
+                    flex-grow: 1;
+
+                    .team-info {
+                        @include flexbox(column, center, center);
+                        text-align: center;
+
+                        h3 {
+                            @include text-style(null, 700, 8px, center, $base-text);
+                            font-size: clamp(24px, 2vw, 20px);
+                        }
+
+                        h4 {
+                            @include text-style(1.2em, 700, 20px, center, $main-color);
+                        }
+
+                        p {
+                            @include text-style(.9em, 500, 25px, center, $base-text);
+                        }
+                    }
+                }
+
+                .social-media {
+                    @include flexbox(row, center, center);
+                    margin-top: 20px;
+
+                    a {
+                        font-size: 1.2em;
+                        margin: 0 8px;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Responsive
+    @media (max-width: 576px) {
+        .container {
+            padding-right: 45px;
+
+            .team-members {
+                grid-gap: 30px;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                .team-member {
+                    width: 100%;
+                    padding: 20px;
+                    margin: 0;
+
+                    h3 {
+                        font-size: 1.5em;
+                    }
+
+                    h4 {
+                        font-size: 1em;
+                    }
+
+                    p {
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 991px) {
+        .container {
+            padding-right: 50px;
+
+            .team-members {
+                @include flexbox(column, center, center);
+                grid-gap: 30px;
+                margin: 0;
+
+                .team-member {
+                    flex-direction: row;
+                    align-items: stretch;
+                    width: 100%;
+                    padding: 25px;
+                    margin: 0;
+
+                    div {
+                        @include flexbox(row, center, center);
+                    }
+
+                    .team-image-container {
+                        width: 30%;
+                        height: 280px;
+                        overflow: hidden;
+                        margin-right: 25px;
+                        margin-bottom: 0;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .team-info-container {
+                        width: 70%;
+                        @include flexbox(column, space-between, flex-start);
+
+                        .team-info {
+                            @include flexbox(column, center, flex-start);
+                            text-align: left;
+
+                            h3 {
+                                font-size: 1.8em;
+                            }
+
+                            h4 {
+                                font-size: 1.2em;
+                            }
+
+                            p {
+                                font-size: .9em;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Integral Service section
+.service-integral {
+    background-color: $second-background;
+    padding: 80px 0 110px 0;
+
+    .container {
+        background-color: $clear-text;
+        @include flexbox(column, center, center);
+        padding: 70px 60px;
+        width: clamp(260px, 90%, 1200px);
+
+        .service-integral-icon {
+            img {
+                width: 100px;
+                height: auto;
+                margin-bottom: 30px;
+            }
+        }
+
+        h2 {
+            width: 70%;
+            @include text-style(3em, 700, 40px, center, $dark-background);
+        }
+
+        p {
+            @include text-style(1.1em, 500, 0, center, $base-text);
+            line-height: 1.8em;
+            width: 90%;
+        }
+    }
+
+    //Responsive
+    @media (max-width: 576px) {
+        .container {
+            padding: 50px 30px;
+            width: 80%;
+
+            .service-integral-icon {
+                img {
+                    width: 70px;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+            }
+
+            h2 {
+                width: 100%;
+                font-size: 2em;
+            }
+
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .container {
+            padding: 50px 30px;
+            width: 85%;
+
+            .service-integral-icon {
+                img {
+                    width: 75px;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+            }
+
+            h2 {
+                width: 100%;
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        .container {
+            padding: 50px 30px;
+            width: 90%;
+
+            .service-integral-icon {
+                img {
+                    width: 90px;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+            }
+
+            h2 {
+                width: 70%;
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: .9em;
+            }
+        }
+    }
+}
+
+// Projects section
+.projects {
+    padding-bottom: 40px;
+    background-color: $second-background;
+
+    .container {
+        @include flexbox(column, center, center);
+        position: relative;
+
+        .title {
+            background-color: $main-color;
+            color: $clear-text;
+            width: 320px;
+            position: absolute;
+            top: -1.2em;
+            z-index: 2;
+            padding: 20px;
+
+            &::after {
+                display: none;
+            }
+        }
+    
+        .carousel-inner {
+            .carousel-item {
+                img {
+                    height: 100%;
+                }
+    
+                .carousel-caption {
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+                    bottom: -10em;
+                    left: 0;
+                    width: 100%;
+                    padding-top: 40px;
+                    transition: bottom .5s;
+                }
+        
+                &:hover .carousel-caption {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .projects-description {
+            padding: 50px 5px;
+            @include flexbox(row, space-between, center);
+
+            p {
+                width: 70%;
+                padding-right: 20px;
+                @include text-style(.9em, 500, 0, left, $base-text);
+            }
+        }
+    }
+
+    //Responsive
+    @media (max-width: 576px) {
+        .container {
+            .title {
+                width: 180px;
+                font-size: 1.5em;
+                top: -1.8em;
+            }
+
+            .projects-description {
+                padding: 30px 5px;
+                @include flexbox(column, space-between, center);
+
+                p {
+                    width: 100%;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+        .container {
+            .title {
+                width: 200px;
+                font-size: 1.7em;
+            }
+
+            .projects-description {
+                padding: 30px 5px;
             }
         }
     }
