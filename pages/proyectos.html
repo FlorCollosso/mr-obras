@@ -39,14 +39,14 @@
       <div class="container align-items-end">
         <a class="logo" href="../index.html"><img src="../assets/images/logo_full.svg" alt="MR Obras Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggler-btn">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse flex-grow-0 justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto menu-list">
             <li class="item-list"><a class="link-list" href="../index.html">Inicio</a></li>
             <li class="item-list"><a class="link-list" href="nosotros.html">Nosotros</a></li>
-            <li class="item-list"><a class="active link-list" href="proyectos.html">Proyectos</a></li>
+            <li class="item-list"><a class="actived link-list" href="proyectos.html">Proyectos</a></li>
             <li class="item-list"><a class="link-list" href="tipologias.html">Tipologías</a></li>
             <li class="item-list"><a class="link-list" href="contacto.html">Contacto</a></li>
           </ul>
@@ -59,27 +59,27 @@
   <section class="banner-projects">
     <div class="container">
       <div>
-        <h1 class="text-center my-4">Nuestros Proyectos</h1>
-        <p class="text-center">​Te invitamos a recorrer nuestra galería de proyectos y descubrir cómo hemos transformado
-          ideas en realidades tangibles.</p>
+        <h1 class="title">Nuestros Proyectos</h1>
+        <p>​Te invitamos a recorrer nuestra galería de proyectos y descubrir cómo hemos transformado
+          ideas en realidades&nbsp;tangibles.</p>
       </div>
       <h5>¿Interesado en construir tu propio hogar?</h5>
-      <p>Descubrí nuestras tipologías de casas para encontrar el diseño perfecto que se adapte a las necesidades de tu
-        familia.</p>
-      <a href="#"> Ver tipologías</a>
+      <p>Descubrí nuestras tipologías de casas para encontrar el&nbsp;diseño perfecto que se adapte a las
+        necesidades&nbsp;de&nbsp;tu&nbsp;familia.</p>
+      <a href="#" class="button"> Ver tipologías</a>
     </div>
   </section>
 
   <!-- Tabs -->
-  <section class="container my-4">
+  <section class="container my-4 gallery-section">
     <ul class="nav nav-tabs">
-      <li class="nav-item">
+      <li class="nav-item grid-area-a">
         <a class="nav-link active" data-bs-toggle="tab" href="#viviendas-familiares">Viviendas Familiares</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item grid-area-b">
         <a class="nav-link" data-bs-toggle="tab" href="#espacios-comerciales">Espacios Comerciales</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item grid-area-c">
         <a class="nav-link" data-bs-toggle="tab" href="#remodelaciones">Remodelaciones</a>
       </li>
     </ul>
@@ -90,22 +90,34 @@
       <div class="tab-pane fade show active" id="viviendas-familiares">
         <div class="row">
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-moderna-2.jpg" class="img-fluid" alt="Vivienda Familiar 1">
+            <img src="../assets/images/vivienda-moderna-2.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño familiar moderna con pérgola de madera" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-moderna.jpg" class="img-fluid" alt="Vivienda Familiar 2">
+            <img src="../assets/images/vivienda-moderna.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño compacta clásica" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-familiar-2.jpg" class="img-fluid" alt="Vivienda Familiar 3">
+            <img src="../assets/images/vivienda-familiar-2.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño premium de dos pisos moderna con garage"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-familiar-3.jpg" class="img-fluid" alt="Vivienda Familiar 4">
+            <img src="../assets/images/vivienda-familiar-3.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño premium moderna con detalles exteriores en madera"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-familiar-4.jpg" class="img-fluid" alt="Vivienda Familiar 5">
+            <img src="../assets/images/vivienda-familiar-4.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño premium clásica con galería y detalles exteriores en madera"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/vivienda-familiar-5.jpg" class="img-fluid" alt="Vivienda Familiar 6">
+            <img src="../assets/images/vivienda-familiar-5.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de vivienda familiar tamaño premium moderna con garage exterior" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
         </div>
       </div>
@@ -114,16 +126,24 @@
       <div class="tab-pane fade" id="espacios-comerciales">
         <div class="row">
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/espacio-comercial.jpg" class="img-fluid" alt="Comercial 1">
+            <img src="../assets/images/espacio-comercial.jpg" class="img-fluid gallery-img"
+              alt="Fotografía del interior de un espacio comercial dividido para oficinas con drywall"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid" alt="Comercial 2">
+            <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de una habitación modificada con drywall en el techo y almacenamiento"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/espacio-comercial-3.jpg" class="img-fluid" alt="Comercial 3">
+            <img src="../assets/images/espacio-comercial-3.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de local comercial remodelado con drywall" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/finezza.jpg" class="img-fluid" alt="Comercial Finezza">
+            <img src="../assets/images/finezza.jpg" class="img-fluid gallery-img"
+              alt="Fotografía del interior de un espacio comercial con divisiones hechas en Drywall"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
         </div>
       </div>
@@ -132,22 +152,48 @@
       <div class="tab-pane fade" id="remodelaciones">
         <div class="row">
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid" alt="Remodelación 1">
+            <img src="../assets/images/espacio-comercial-2.jpg" class="img-fluid gallery-img"
+              alt="Fotografía de una habitación modificada con drywall en el techo y almacenamiento"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/remodelacion.jpeg" class="img-fluid" alt="Remodelación 2">
+            <img src="../assets/images/remodelacion.jpeg" class="img-fluid gallery-img"
+              alt="Mueble encastrado en pared hecho con drywall" data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/remodelacion-2.jpeg" class="img-fluid" alt="Remodelación 3">
+            <img src="../assets/images/remodelacion-2.jpeg" class="img-fluid gallery-img"
+              alt="Remodelación en departamento con drywall, estanterías y techos con luz integrada"
+              data-bs-toggle="modal" data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/remodelacion-3.webp" class="img-fluid" alt="Remodelación 3">
+            <img src="../assets/images/remodelacion-3.webp" class="img-fluid gallery-img"
+              alt="Remodelación de techo con drywall y luz integrada" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/remodelacion-4.jpg" class="img-fluid" alt="Remodelación 3">
+            <img src="../assets/images/remodelacion-4.jpg" class="img-fluid gallery-img"
+              alt="Remodelación y división de espacios con drywall" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
           </div>
           <div class="col-md-4 mb-3 project-image">
-            <img src="../assets/images/remodelacion-5.jpg" class="img-fluid" alt="Remodelación 3">
+            <img src="../assets/images/remodelacion-5.jpg" class="img-fluid gallery-img"
+              alt="Remodelación de interior de vivienda con drywall" data-bs-toggle="modal"
+              data-bs-target="#galleryModal">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para mostrar la imagen en grande -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="galleryModalLabel">Vista Completa</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="" class="img-fluid" id="modalImage" alt="Imagen en grande">
           </div>
         </div>
       </div>
@@ -189,6 +235,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <script src="../js/script.js"></script>
 
 </body>
 

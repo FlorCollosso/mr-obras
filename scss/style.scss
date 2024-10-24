@@ -1,7 +1,6 @@
-@import 'base/base';
-
 @import 'utilities/variables';
 @import 'utilities/mixins';
+@import 'base/base';
 
 @import 'components/buttons';
 @import 'components/cards';
@@ -13,3 +12,5 @@
 @import 'pages/home';
 @import 'pages/nosotros';
 @import 'pages/contacto';
+@import 'pages/proyectos';
+@import 'pages/tipologias';

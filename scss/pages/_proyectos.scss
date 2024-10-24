@@ -1,0 +1,197 @@
+// Banner Section
+.banner-projects {
+    padding: 160px 0 80px 0;
+    @include flexbox(column, center, center);
+    background-color: $base-background;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 50%;
+        @include background-image("../../assets/images/portada-2.jpg", cover, center);
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    .container {
+        width: 70%;
+        max-width: 900px;
+        padding: 40px 20px;
+        @include flexbox(column, center, center);
+        @include box-shadow-effect;
+        position: relative;
+        z-index: 2;
+
+        div {
+            @include flexbox(column, center, center);
+
+            .title {
+                padding-top: 0;
+            }
+
+            p {
+                font-size: 1.2em;
+                text-align: center;
+                margin: 20px 0;
+                width: 85%;
+            }
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 0 0 35px 0;
+            width: 85%;
+        }
+
+        h5 {
+            font-size: 1.2em;
+            font-weight: 700;
+            text-align: center;
+            color: $titles-color;
+            padding: 20px 0 5px 0;
+        }
+    }
+    
+    // Responsive
+    @media (max-width: 991px) {
+        .container {
+            width: 70%;
+            padding: 35px;
+
+            div {
+                .title {
+                    font-size: 1.5em;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: 1em;
+                }
+            }
+
+            p {
+                font-size: 1em;
+                margin: 0 0 40px 0;
+                width: 100%;
+            }
+
+            h5 {
+                font-size: 1em;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container {
+            width: 90%;
+            padding: 20px;
+
+            div {
+                .title {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    width: 100%;
+                    font-size: .9em;
+                }
+            }
+
+            p {
+                font-size: .9em;
+                margin: 0 0 30px 0;
+                width: 100%;
+            }
+
+            h5 {
+                font-size: .9em;
+            }
+        }
+    }
+}
+
+// Gallery Section
+.gallery-section {
+    .nav-tabs {
+        border: none;
+        display: grid;
+        grid-template-areas: "a b c";
+
+        .grid-area-a {
+            grid-area: a;
+        }
+
+        .grid-area-b {
+            grid-area: b;
+        }
+
+        .grid-area-c {
+            grid-area: c;
+        }
+
+        .nav-item {
+            width: 100%;
+            text-align: center;
+
+            .nav-link {
+                color: $base-text;
+                background-color: $second-background;
+                border-radius: 0;
+                border-top: 2px solid $light-base-text;
+
+                &:hover {
+                    background-color: $base-background;
+                }
+    
+                &.active {
+                    color: $main-color;
+                    background-color: $base-background;
+                    border: none;
+                    border-radius: 0;
+                    border-top: 2px solid $main-color;
+                }
+            }
+        }
+    }
+
+    .gallery-projects {
+        .tab-pane {
+            .project-image {
+                height: 250px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+        .nav-tabs {
+            display: grid;
+            grid-template-areas: 
+            "a a"
+            "b c";
+
+            .nav-item {
+                .nav-link {
+                    font-size: .9em;
+                }
+            }
+        }
+
+        .gallery-projects {
+            .tab-pane {
+                .project-image {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

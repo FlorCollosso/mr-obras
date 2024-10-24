@@ -523,8 +523,12 @@
                     bottom: -10em;
                     left: 0;
                     width: 100%;
-                    padding-top: 40px;
+                    padding: 60px 0;
                     transition: bottom .5s;
+                }
+
+                p {
+                    padding: 0 80px;
                 }
         
                 &:hover .carousel-caption {

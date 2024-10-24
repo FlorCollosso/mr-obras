@@ -54,10 +54,10 @@
         .fqa-container {
             width: 50%;
             background-color: $second-background;
-            padding: 10px;
+            padding: 20px 10px;
 
             .fqa-item {
-                padding: 20px;
+                padding: 10px 20px;
                 border-radius: 5px;
 
                 h3 {
@@ -75,22 +75,28 @@
                     @include flexbox(row, space-between, center);
                     background-color: $clear-text;
                     padding: 20px;
+                    transition: all 0.3s ease-in-out;
+
+                    i {
+                        padding: 0 10px;
+                    }
+
+                    &.open {
+                        color: $main-color;
+
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
 
                 .fqa-answer {
                     height: 0;
                     overflow: hidden;
                     transition: height 0.3s ease;
-                }
 
-                &:hover {
-
-                    .fqa-answer {
+                    .fqa-item.open & {
                         height: auto;
-                    }
-                    
-                    .fqa-question h3 {
-                        color: $main-color;
                     }
                 }
             }

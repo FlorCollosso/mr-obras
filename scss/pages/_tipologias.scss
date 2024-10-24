@@ -1,0 +1,174 @@
+// Banner Section
+.banner-typo {
+    height: 80vh;
+    padding-top: 80px;
+    @include flexbox(column, center, flex-start);
+    @include background-image("../../assets/images/portada-3.jpg", cover, center);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    .container {
+        color: $clear-text;
+        @include flexbox(column, center, flex-start);
+        position: relative;
+        z-index: 2;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            text-align: left;
+            margin: 0 0 20px 0;
+            width: 50%;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: left;
+            margin: 0 0 35px 0;
+            width: 50%;
+        }
+    }
+}
+
+// Quote Section
+.quote-section {
+    padding: 50px 40px;
+    color: $clear-text;
+    @include flexbox(column, center, center);
+
+    div {
+        @include flexbox(row, space-between, center);
+        background-color: $main-color;
+        padding: 30px 40px;
+        max-width: 1200px;
+
+        h3 {
+            font-size: 1.8em;
+            font-weight: 400;
+            text-align: left;
+            width: 70%;
+            margin: 0;
+            padding-right: 20px;
+        }
+
+        .button {
+            background-color: $main-color-dark;
+
+            &:hover {
+                background-color: #026b61;
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 991px) {
+        div {
+            h3 {
+                font-size: 1.5em;
+                width: 60%;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        div {
+            @include flexbox(column, center, center);
+
+            h3 {
+                font-size: 1.5em;
+                width: 100%;
+                text-align: center;
+                padding: 0 0 20px 0;
+            }
+        }
+    }
+}
+
+// Gallery Section
+.gallery-typo {
+    .tab-pane {
+        p{
+            padding-bottom: 20px;
+        }
+
+        .card-container {
+            .typo-card {
+                box-shadow: none;
+                height: 500px;
+                margin: 0;
+                padding: 0;
+                border: none;
+                color: $clear-text;
+                
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    filter: brightness(0.5);
+                }
+
+                div {
+                    padding: 25px;
+
+                    h5 {
+                        font-size: 1.5em;
+                        font-weight: 700;
+                        text-align: center;
+                        margin: 0;
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // Responsive
+    @media (max-width: 991px) {
+        .tab-pane {
+            .card-container {
+                .typo-card {
+                    height: 400px;
+                    
+                    div {
+                        h5 {
+                            font-size: 1.6em;
+                        }
+
+                        p {
+                            font-size: 1.1em;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        .tab-pane {
+            .card-container {
+                .typo-card {
+                    div {
+                        h5 {
+                            font-size: 1.5em;
+                        }
+
+                        p {
+                            font-size: 1em;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

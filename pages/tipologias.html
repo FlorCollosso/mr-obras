@@ -40,7 +40,7 @@
                 <a class="logo" href="../index.html"><img src="../assets/images/logo_full.svg" alt="MR Obras Logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                    aria-expanded="false" aria-label="Toggle navigation" id="toggler-btn">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse flex-grow-0 justify-content-end" id="navbarSupportedContent">
@@ -48,7 +48,7 @@
                         <li class="item-list"><a class="link-list" href="../index.html">Inicio</a></li>
                         <li class="item-list"><a class="link-list" href="nosotros.html">Nosotros</a></li>
                         <li class="item-list"><a class="link-list" href="proyectos.html">Proyectos</a></li>
-                        <li class="item-list"><a class="active link-list" href="tipologias.html">Tipologías</a></li>
+                        <li class="item-list"><a class="link-list actived" href="tipologias.html">Tipologías</a></li>
                         <li class="item-list"><a class="link-list" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
@@ -59,24 +59,31 @@
     <!-- Banner -->
     <section class="banner-typo">
         <div class="container">
-            <h1 class="text-center my-4">Encuentra la Ideal para Tu Familia</h1>
-            <p class="text-center">​En MR Obras, entendemos que cada familia es única, y por eso ofrecemos una variedad
+            <h1 class="my-4">Encuentra&nbsp;la&nbsp;Casa Ideal&nbsp;para&nbsp;Tu&nbsp;Familia</h1>
+            <p>​En MR Obras, entendemos que cada familia es única, y por eso ofrecemos una variedad
                 de tipologías de casas diseñadas para adaptarse a diferentes estilos de vida y necesidades. </p>
         </div>
     </section>
 
-
+    <!-- Quote Section -->
+    <Section class="quote-section">
+        <div>
+            <h3>Calidad, rapidez, compromiso y eficiencia en cada uno de nuestros proyectos.</h3>
+            <a href="https://api.whatsapp.com/send?phone=5493576464053&text=Hola%2C%20me%20gustaría%hacer%20una%20consulta%20sobre%20una%20cotización.
+            " class="button">Cotización gratuita</a>
+        </div>
+    </Section>
 
     <!-- Tabs -->
-    <div class="container my-4">
+    <section class="container gallery-section gallery-typo">
         <ul class="nav nav-tabs">
-            <li class="nav-item">
+            <li class="nav-item grid-area-a">
                 <a class="nav-link active" data-bs-toggle="tab" href="#clasicas">Clásicas</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item grid-area-b">
                 <a class="nav-link" data-bs-toggle="tab" href="#modernas">Modernas</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item grid-area-c">
                 <a class="nav-link" data-bs-toggle="tab" href="#container">Container</a>
             </li>
         </ul>
@@ -89,9 +96,10 @@
                     agregar espacios específicos hasta diseños de interiores personalizados.</p>
                 <div class="row">
                     <!-- Tarjeta Compacta -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class=" card typo-card">
-                            <img src="../assets/images/vivienda-moderna-2.jpg" class="card-img" alt="Compacta">
+                            <img src="../assets/images/vivienda-moderna-2.jpg" class="card-img"
+                                alt="Fotografía de una casa clásica compacta">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Compacta</h5>
                                 <p class="card-text">Vivienda de una sola habitación, un baño, ​cocina integrada con
@@ -101,9 +109,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Familiar -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/vivienda-prefab.webp" class="card-img" alt="Familiar">
+                            <img src="../assets/images/vivienda-prefab.webp" class="card-img"
+                                alt="Fotografía de una casa clásica tamaño familiar">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Familiar</h5>
                                 <p class="card-text">Vivienda de dos a tres habitaciones, un baño, cocina integrada con
@@ -113,9 +122,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Premium -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/vivienda-familiar-4.jpg" class="card-img" alt="Premium">
+                            <img src="../assets/images/vivienda-familiar-4.jpg" class="card-img"
+                                alt="Fotografía de una casa clásica tamaño premium">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Premium</h5>
                                 <p class="card-text">Cuatro habitaciones, dos baños, cocina separada, sala de estar,
@@ -134,9 +144,10 @@
                     opción perfecta para quienes valoran la innovación en diseño.</p>
                 <div class="row">
                     <!-- Tarjeta Compacta Moderna -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/vivienda-moderna-3.jpeg" class="card-img" alt="Compacta Moderna">
+                            <img src="../assets/images/vivienda-moderna-3.jpeg" class="card-img"
+                                alt="Fotografía de una casa moderna compacta">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Compacta</h5>
                                 <p class="card-text">Vivienda de una sola habitación, un baño, ​cocina integrada con
@@ -146,9 +157,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Familiar Moderna -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/vivienda-familiar-3.jpg" class="card-img" alt="Familiar Moderna">
+                            <img src="../assets/images/vivienda-familiar-3.jpg" class="card-img"
+                                alt="Fotografía de una casa moderna tamaño familiar">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Familiar</h5>
                                 <p class="card-text">Vivienda de dos a tres habitaciones, un baño, cocina integrada con
@@ -158,9 +170,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Premium Moderna -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/vivienda-moderna-4.jpeg" class="card-img" alt="Premium Moderna">
+                            <img src="../assets/images/vivienda-moderna-4.jpeg" class="card-img"
+                                alt="Fotografía de una casa moderna tamaño premium">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Premium</h5>
                                 <p class="card-text">Cuatro habitaciones, dos baños, cocina separada, sala de estar,
@@ -179,9 +192,10 @@
                     y diseño versátil, permitiendo configuraciones personalizadas según las necesidades del usuario.</p>
                 <div class="row">
                     <!-- Tarjeta Compacta Container -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/container.png" class="card-img" alt="Compacta Container">
+                            <img src="../assets/images/container.png" class="card-img"
+                                alt="Fotografía de una casa container compacta">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Compacta</h5>
                                 <p class="card-text">Vivienda de una sola habitación, un baño, ​cocina integrada con
@@ -191,9 +205,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Familiar Container -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/conatiner-3.jpg" class="card-img" alt="Familiar Container">
+                            <img src="../assets/images/conatiner-3.jpg" class="card-img"
+                                alt="Fotografía de una casa container tamaño familiar">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Familiar</h5>
                                 <p class="card-text">Vivienda de dos a tres habitaciones, un baño, cocina integrada con
@@ -203,9 +218,10 @@
                         </div>
                     </div>
                     <!-- Tarjeta Premium Container -->
-                    <div class="col-md-4 mb-3 card-container">
+                    <div class="col-lg-4 mb-3 card-container">
                         <div class="card typo-card">
-                            <img src="../assets/images/container-4.jpeg" class="card-img" alt="Premium Container">
+                            <img src="../assets/images/container-4.jpeg" class="card-img"
+                                alt="Fotografía de una casa container tamaño premium">
                             <div class="card-img-overlay d-flex flex-column justify-content-end align-items-start">
                                 <h5 class="card-title">Premium</h5>
                                 <p class="card-text">Cuatro habitaciones, dos baños, cocina separada, sala de estar,
@@ -217,7 +233,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -254,6 +270,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 
