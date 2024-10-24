@@ -2035,6 +2035,36 @@ footer .copyright p {
   margin: 0 0 35px 0;
   width: 50%;
 }
+@media (max-width: 991px) {
+  .banner-typo .container h1 {
+    font-size: 2.5em;
+    width: 70%;
+  }
+  .banner-typo .container p {
+    font-size: 1em;
+    width: 70%;
+  }
+}
+@media (max-width: 767px) {
+  .banner-typo .container h1 {
+    font-size: 2.2em;
+    width: 90%;
+  }
+  .banner-typo .container p {
+    font-size: 1em;
+    width: 90%;
+  }
+}
+@media (max-width: 575px) {
+  .banner-typo .container h1 {
+    font-size: 2em;
+    width: 100%;
+  }
+  .banner-typo .container p {
+    font-size: 1em;
+    width: 100%;
+  }
+}
 
 .quote-section {
   padding: 50px 40px;
