@@ -1753,7 +1753,7 @@ footer .copyright p {
   left: 0;
   width: 100%;
   height: 90%;
-  background-image: url("../../assets/images/steel-framing-image.jpg");
+  background-image: url("../assets/images/steel-framing-image.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1837,7 +1837,7 @@ footer .copyright p {
   display: block;
   width: 100%;
   height: 50%;
-  background-image: url("../../assets/images/portada-2.jpg");
+  background-image: url("../assets/images/portada-2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1998,7 +1998,7 @@ footer .copyright p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("../../assets/images/portada-3.jpg");
+  background-image: url("../assets/images/portada-3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

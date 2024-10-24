@@ -3,7 +3,7 @@
     height: 80vh;
     padding-top: 80px;
     @include flexbox(column, center, flex-start);
-    @include background-image("../../assets/images/portada-3.jpg", cover, center);
+    @include background-image("../assets/images/portada-3.jpg", cover, center);
 
     &:before {
         content: "";
