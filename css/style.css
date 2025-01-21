@@ -685,7 +685,7 @@ footer .copyright p {
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/steel-framing-image.jpg");
+  background-image: url("../assets/images/steel-framing-image.webp");
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
@@ -826,7 +826,7 @@ footer .copyright p {
   width: 90%;
   height: 500px;
   margin-top: 70px;
-  background-image: url("../assets/images/3-workers.jpg");
+  background-image: url("../assets/images/3-workers.webp");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1773,7 +1773,7 @@ footer .copyright p {
   left: 0;
   width: 100%;
   height: 90%;
-  background-image: url("../assets/images/contacto-portada.jpeg");
+  background-image: url("../assets/images/contacto-portada.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1857,7 +1857,7 @@ footer .copyright p {
   display: block;
   width: 100%;
   height: 50%;
-  background-image: url("../assets/images/portada-2.jpeg");
+  background-image: url("../assets/images/portada-2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2018,7 +2018,7 @@ footer .copyright p {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-image: url("../assets/images/portada-3.jpg");
+  background-image: url("../assets/images/portada-3.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
